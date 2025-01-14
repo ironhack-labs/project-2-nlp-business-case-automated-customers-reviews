@@ -2,3 +2,4 @@ pandas
 joblib
 openai
 streamlit
+scikit-learn
