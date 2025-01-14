@@ -8,7 +8,7 @@ from typing import List
 
 # Constants
 DATA_FILE = 'amazon_reviews_clustered_sentiment.csv'
-MODEL_FILE = 'SVM_best_model.pkl'
+MODEL_FILE = 'sentiment_model.pkl'
 VECTORIZER_FILE = 'tfidf_vectorizer.pkl'
 
 def load_data(file_path: str) -> pd.DataFrame:
