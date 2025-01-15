@@ -6,6 +6,19 @@ import openai
 import streamlit as st
 from typing import List
 
+openai.api_key = st.secrets["openai_api_key"]
+
+st.title("My Streamlit App with OpenAI")
+
+user_prompt = st.text_input("Enter your prompt:")
+if st.button("Get Completion"):
+    response = openai.Completion.create(
+        model="text-davinci-003",  # <--- Using 'model' instead of 'engine'
+        prompt=user_prompt,
+        max_tokens=50
+    )
+    st.write(response.choices[0].text)
+
 # Constants
 DATA_FILE = 'amazon_reviews_clustered_sentiment.csv'
 MODEL_FILE = 'sentiment_model.pkl'
@@ -58,7 +71,7 @@ def generate_article(category_name: str, top_products: List[str], bottom_product
     Keep the article concise and engaging.
     """
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        model="text-davinci-003",  # <--- Changed from 'engine' to 'model'
         prompt=prompt,
         max_tokens=1000,
         temperature=0.8,
