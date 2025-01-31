@@ -1,6 +1,8 @@
 # Amazon Review Analysis
 
 Este proyecto analiza reseñas de Amazon utilizando técnicas de NLP y muestra los resultados en un dashboard interactivo.
+Huggingface URL: https://huggingface.co/spaces/VicGerardoPR/AmazonSenitmentReview
+The code in Github is not complete.
 
 ## Instalación
 
