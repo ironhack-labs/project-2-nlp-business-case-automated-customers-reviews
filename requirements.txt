@@ -1,0 +1,7 @@
+pandas
+joblib
+openai
+gradio
+scikit-learn
+python-dotenv
+
